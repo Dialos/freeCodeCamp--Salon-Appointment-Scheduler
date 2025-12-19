@@ -10,7 +10,7 @@ MAIN_MENU() {
   SERVICES=$($PSQL "SELECT service_id, name FROM services ORDER BY service_id;")
   echo "$SERVICES" | while read SERVICE_ID BAR SERVICE_NAME
   do
-    echo "$SERVICE_ID- $SERVICE_NAME"
+    echo "$SERVICE_ID) $SERVICE_NAME"
   done
 
   read SERVICE_ID_SELECTED
